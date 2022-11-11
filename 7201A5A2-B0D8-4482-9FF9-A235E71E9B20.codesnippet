@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>A_empty</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import &lt;DZNEmptyDataSet/UIScrollView+EmptyDataSet.h&gt;
+DZNEmptyDataSetSource,DZNEmptyDataSetDelegate
+_tableView.emptyDataSetSource = self;
+_tableView.emptyDataSetDelegate = self;
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
+    return kTableViewPlaceHolderImg;
+}
+ 
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    NSString *text = kLocalizeStr(@"暂无牌局");
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:12.0f],
+                                 NSForegroundColorAttributeName: kHexColor(0xC0A286)};
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+ 
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView {
+    return YES;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7201A5A2-B0D8-4482-9FF9-A235E71E9B20</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>A_empty</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>A_empty</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
